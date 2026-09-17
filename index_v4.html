@@ -1,11 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VXDR3RZ91E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VXDR3RZ91E');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#075e54">
 <title>PM SHRI A.A. Latif Girls' Institution, Mankachar</title>
-<!-- Google Analytics 4 can be added here once the school Measurement ID (G-XXXXXXXXXX) is available. No public visitor counter is used. -->
+
 <meta name="description" content="PM SHRI A.A. Latif Girls' Institution, Mankachar, Assam — school information, academics, notices, gallery and PM SHRI initiatives.">
 <style>
 :root{
@@ -23,7 +31,7 @@ a{color:inherit;text-decoration:none}
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{max-width:1200px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .brand{display:flex;align-items:center;gap:13px;min-width:0}
-.logo-wrap{width:66px;height:66px;flex:0 0 66px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--saffron);background:linear-gradient(145deg,#fff,#f8eee1);color:var(--green);font-weight:950;text-align:center;line-height:1.02;font-size:12px}
+.logo-wrap img{width:100%;height:100%;object-fit:contain;display:block}.logo-wrap{width:66px;height:66px;flex:0 0 66px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--saffron);background:linear-gradient(145deg,#fff,#f8eee1);color:var(--green);font-weight:950;text-align:center;line-height:1.02;font-size:12px}
 .brand-text{font-weight:900;font-size:19px;line-height:1.2}
 .brand-text small{display:block;margin-top:5px;color:var(--green);font-size:11.5px;font-weight:800;letter-spacing:.01em}
 nav{display:flex;align-items:center;gap:20px;font-size:14px;font-weight:800;color:#33433f}
@@ -119,10 +127,23 @@ footer{background:#022f2b;color:#b8d1cc;padding:28px 22px;font-size:13px}
 .marquee-track span{margin-right:55px}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .gallery .photo{position:relative;padding:0;display:block;background:#e7efec}
-.gallery .photo img{width:100%;height:100%;display:block;object-fit:cover}
+.gallery .photo img{width:100%;height:100%;display:block;object-fit:cover}.gallery .photo img.rotated-dance{object-fit:contain;background:#e7efec}
 .gallery .photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:12px 13px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font-size:14px;font-weight:850;text-align:left}
 .gallery .photo figcaption span{display:block;color:#e9f5f2;font-size:11px;font-weight:650;margin-top:2px}
 .contact a.email-link{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+.feedback{background:linear-gradient(145deg,#fff8ed,#ffffff)}
+.feedback-card{max-width:900px;margin:28px auto 0;background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:0 10px 34px rgba(15,54,47,.06);text-align:center}
+.feedback-card p{color:var(--muted);font-size:17px;max-width:720px;margin:0 auto 22px}
+.feedback-btn{background:var(--green);color:#fff;border:0;box-shadow:0 8px 22px rgba(7,94,84,.18)}
+.feedback-btn:hover{background:var(--green-soft)}
+.facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.facility{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;font-weight:800;color:#33433f}
+.faculty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.faculty{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-weight:750;color:#33433f}
+@media(max-width:900px){.facility-grid,.faculty-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.facility-grid,.faculty-grid{grid-template-columns:1fr}}
+
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}.marquee{overflow:auto}}
 </style>
 </head>
@@ -138,7 +159,7 @@ footer{background:#022f2b;color:#b8d1cc;padding:28px 22px;font-size:13px}
 <header>
   <div class="nav">
     <a class="brand" href="#home" aria-label="School home">
-      <div class="logo-wrap" aria-label="PM SHRI logo placeholder">PM<br>SHRI</div>
+      <div class="logo-wrap"><img src="pm-shri-logo.png" alt="PM SHRI logo"></div>
       <div class="brand-text">
         PM SHRI A.A. Latif Girls' Institution, Mankachar
         <small>Established 1962 • Classes I–XII • South Salmara-Mankachar, Assam</small>
@@ -147,7 +168,7 @@ footer{background:#022f2b;color:#b8d1cc;padding:28px 22px;font-size:13px}
     <button class="menu" onclick="toggleNav()" aria-label="Open navigation">☰</button>
     <nav id="nav">
       <a href="#home">Home</a><a href="#about">About</a><a href="#academics">Academics</a>
-      <a href="#pmshri">PM SHRI</a><a href="#notices">Notices</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+      <a href="#pmshri">PM SHRI</a><a href="#academics">Academics</a><a href="#facilities">Facilities</a><a href="#faculty">Faculty</a><a href="#feedback">Feedback</a><a href="#notices">Notices</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -196,29 +217,36 @@ footer{background:#022f2b;color:#b8d1cc;padding:28px 22px;font-size:13px}
 
 <section class="section" id="about">
   <div class="eyebrow">About the school</div>
-  <h2>A school with a long-standing foundation.</h2>
-  <p class="lead">PM SHRI A.A. Latif Girls' Institution, Mankachar was established in 1962 and serves girls from Classes I–XII.</p>
+  <h2>PM SHRI A.A. Latif Girls' Institution</h2>
+  <p class="lead">PM SHRI A.A. Latif Girls' Institution, Mankachar was established in 1962 in South Salmara-Mankachar district of Assam. Located in Mankachar Block, the school is situated in a rural area and is committed to imparting quality education to female students from Classes I–XII.</p>
 
   <div class="intro-grid">
     <article class="feature">
-      <h3>School Leadership</h3>
-      <p>The school is led by the Principal, with space on this website for the leadership message, staff profiles and school achievements to be added as confirmed information becomes available.</p>
+      <h3>School Profile</h3>
+      <p><strong>Established:</strong> 1962</p>
+      <p><strong>District:</strong> South Salmara-Mankachar</p>
+      <p><strong>Block:</strong> Mankachar</p>
+      <p><strong>PIN:</strong> 783131</p>
+      <p><strong>Area:</strong> Rural</p>
+      <p><strong>Students:</strong> Female students</p>
+      <p><strong>Classes:</strong> I–XII</p>
+      <p><strong>Affiliation:</strong> Board of Secondary Education, Assam (SEBA)</p>
+    </article>
+    <article class="highlight">
+      <h3>Principal's Message</h3>
+      <p>Education is a powerful force that moulds students into responsible and good citizens and helps transform the world for the better. At PM SHRI A.A. Latif Girls' Institution, we believe education is not merely about acquiring knowledge; it is about developing character, confidence, values and a sense of responsibility towards society.</p>
+      <p>Girls' education is especially important because educated girls become educated mothers, and educated mothers play a vital role in shaping the future generation. When mothers are educated, families become more aware, children receive better guidance, and the foundation of an educated and progressive nation becomes stronger.</p>
       <div class="principal">
         <div class="avatar">IH</div>
         <div><b>Irshad Hassan</b><span>Principal</span></div>
       </div>
     </article>
-    <article class="highlight">
-      <h3>Our digital campus</h3>
-      <p>This website is designed to make essential school information easier for students, parents and the wider community to access.</p>
-      <p><strong>Coming next:</strong> verified staff details, school photographs, contact information, notices and activity updates.</p>
-    </article>
   </div>
 
   <div class="cards">
-    <article class="card"><div class="icon">🎓</div><h3>Academics</h3><p>Space for subjects, examinations, academic resources and important learning updates.</p></article>
-    <article class="card"><div class="icon">🌱</div><h3>Holistic Development</h3><p>Highlight sports, arts, clubs, life skills, innovation and student-led activities.</p></article>
-    <article class="card"><div class="icon">💡</div><h3>Future Ready</h3><p>A digital platform for PM SHRI initiatives, technology-enabled learning and school innovation.</p></article>
+    <article class="card"><div class="icon">🎓</div><h3>Quality Education</h3><p>Committed to providing quality and inclusive education to girls from the local community.</p></article>
+    <article class="card"><div class="icon">🌱</div><h3>Holistic Development</h3><p>Encouraging academic, creative, cultural, practical and life-skill development.</p></article>
+    <article class="card"><div class="icon">💡</div><h3>Future Ready</h3><p>Promoting learning, technology, confidence, discipline, cooperation and social responsibility.</p></article>
   </div>
 </section>
 
@@ -241,13 +269,50 @@ footer{background:#022f2b;color:#b8d1cc;padding:28px 22px;font-size:13px}
 <section class="section" id="academics">
   <div class="eyebrow">Academics</div>
   <h2>Learning at our school</h2>
-  <p class="lead">This section is ready for the school's confirmed curriculum, subjects, examination information, results and academic resources.</p>
+  <p class="lead">The school provides education from Classes I to XII. Academic provision includes primary, middle, secondary and higher-secondary education, with Arts stream at the higher-secondary level.</p>
   <div class="cards">
-    <article class="card"><div class="icon">📚</div><h3>Classes I–V</h3><p>Foundational learning and primary-level academic information.</p></article>
-    <article class="card"><div class="icon">🧪</div><h3>Classes VI–VIII</h3><p>Middle-school learning, subjects and academic activities.</p></article>
-    <article class="card"><div class="icon">📝</div><h3>Classes IX–X</h3><p>Secondary-level learning and examination-focused academic information.</p></article>
-    <article class="card"><div class="icon">🎓</div><h3>Classes XI–XII</h3><p>Higher-secondary streams, subjects and academic information.</p></article>
+    <article class="card"><div class="icon">📚</div><h3>Classes I–V</h3><p>Primary-level education with a focus on foundational learning and overall development.</p></article>
+    <article class="card"><div class="icon">🧪</div><h3>Classes VI–VIII</h3><p>Middle-level education supporting continued academic learning and student development.</p></article>
+    <article class="card"><div class="icon">📝</div><h3>Classes IX–X</h3><p><strong>Electives:</strong> Garment Designing, Tourism, Retail, Advanced Mathematics, Hindi and Geography.</p></article>
+    <article class="card"><div class="icon">🎓</div><h3>Classes XI–XII</h3><p><strong>Stream:</strong> Arts only. The school is affiliated to the Board of Secondary Education, Assam (SEBA), as confirmed for this website.</p></article>
   </div>
+</section>
+
+<section class="section" id="vision">
+  <div class="eyebrow">Vision & Mission</div>
+  <h2>Empowering girls through education.</h2>
+  <div class="split">
+    <article class="pm-box"><h3>Our Vision</h3><p>To empower girls through quality education, knowledge, skills and values, enabling them to become confident, responsible and capable individuals who can contribute positively to their families, communities and the nation.</p></article>
+    <article class="pm-box"><h3>Our Mission</h3><ul>
+      <li>To provide quality and inclusive education to girls from the local community.</li>
+      <li>To develop students' knowledge, skills, confidence and character.</li>
+      <li>To encourage students to become responsible and good citizens.</li>
+      <li>To provide opportunities for academic, creative, cultural and practical skills.</li>
+      <li>To promote girls' education and empowerment as an important foundation for progress.</li>
+      <li>To nurture learning, discipline, cooperation and social responsibility.</li>
+    </ul></article>
+  </div>
+</section>
+
+<section class="section" id="facilities">
+  <div class="eyebrow">School Facilities</div>
+  <h2>Learning beyond the classroom.</h2>
+  <div class="facility-grid">
+    <div class="facility">Classrooms</div><div class="facility">Smart Classrooms</div><div class="facility">Library</div>
+    <div class="facility">Computer Lab</div><div class="facility">Science Lab</div><div class="facility">Playground</div>
+    <div class="facility">Drinking Water</div><div class="facility">Toilets</div><div class="facility">Electricity</div>
+    <div class="facility">Internet & ICT Facilities</div><div class="facility">Tele-Education Facility</div><div class="facility">Green House</div>
+    <div class="facility">Herbal Garden</div><div class="facility">Kitchen Garden</div><div class="facility">Sports Coach</div>
+    <div class="facility">Chess Coach</div><div class="facility">Music Coach</div>
+  </div>
+</section>
+
+<section class="section" id="faculty">
+  <div class="eyebrow">Our Faculty</div>
+  <h2>Dedicated teachers and staff.</h2>
+  <p class="lead">Our school is supported by a team of highly qualified, experienced and dedicated teachers who are committed to providing quality education and guiding students in their academic and personal development.</p>
+  <div class="faculty-grid">
+<div class="faculty">ABDUL WAHEB FARAJI</div><div class="faculty">ABDULLA AHMED</div><div class="faculty">BAHARUL ISLAM KHANDAKER</div><div class="faculty">BARUN NATH</div><div class="faculty">BEGOM SALMA ANSARY</div><div class="faculty">CHAYANIKA KALITA</div><div class="faculty">DIPANJALI SARMAH HAQUE</div><div class="faculty">FIROZ KHANDKAR</div><div class="faculty">GITA PAUL</div><div class="faculty">GOLAM MOHAMMAD FARUK</div><div class="faculty">HOSSAIN ALI MOLLAH</div><div class="faculty">IFTIQUAR ALI AHMED</div><div class="faculty">IRSHAD HASSAN</div><div class="faculty">MASUDA KHATUN</div><div class="faculty">MD HABIBUL HOQUE</div><div class="faculty">MD MEHBOOB ALOM</div><div class="faculty">MD MONOJ ISLAM</div><div class="faculty">MD SHAHEBUL ISLAM</div><div class="faculty">MD ZAFIUL AHASAN</div><div class="faculty">MUSADDAR RAHMAN</div><div class="faculty">NAZMA BEGUM</div><div class="faculty">RAJ PAUL</div><div class="faculty">SABINA YESMIN</div><div class="faculty">Saidur Rahman</div><div class="faculty">SANJIVA DUTTA</div><div class="faculty">SHAMSUN NEHAR</div><div class="faculty">SOFI AMEEN</div><div class="faculty">UMME KULSOM</div><div class="faculty">UTPAL BARMAN</div><div class="faculty">WALID AHMED</div><div class="faculty">ZENISH RAHMAN</div></div>
 </section>
 
 <section class="section" id="notices">
@@ -272,8 +337,8 @@ footer{background:#022f2b;color:#b8d1cc;padding:28px 22px;font-size:13px}
   <div class="gallery">
     <figure class="photo"><img src="assets/Tele_Education.jpg" alt="Students participating in tele-education" loading="lazy"><figcaption>Tele-Education<span>Technology-enabled learning</span></figcaption></figure>
     <figure class="photo"><img src="assets/smart_class.jpeg" alt="Students in a smart classroom" loading="lazy"><figcaption>Smart Classroom<span>Digital learning in action</span></figcaption></figure>
-    <figure class="photo"><img src="assets/CAMPUS.jpg" alt="School campus" loading="lazy"><figcaption>School Campus<span>Our learning environment</span></figcaption></figure>
-    <figure class="photo"><img src="assets/MORNING_ASSEMBLY.jpg" alt="Students during morning assembly" loading="lazy"><figcaption>Morning Assembly<span>School community</span></figcaption></figure>
+    <figure class="photo"><img src="assets/CAMPUS(1).jpg" alt="School campus" loading="lazy"><figcaption>School Campus<span>Our learning environment</span></figcaption></figure>
+    <figure class="photo"><img src="assets/MORNING_ASSEMBLY(1).jpg" alt="Students during morning assembly" loading="lazy"><figcaption>Morning Assembly<span>School community</span></figcaption></figure>
     <figure class="photo"><img src="assets/Anti_Tobacco.jpg" alt="Students and staff during an anti-tobacco activity" loading="lazy"><figcaption>Anti-Tobacco Activity<span>Awareness and healthy choices</span></figcaption></figure>
     <figure class="photo"><img src="assets/social_Awareness.jpg" alt="Students participating in a social awareness programme" loading="lazy"><figcaption>Social Awareness<span>Community awareness programme</span></figcaption></figure>
     <figure class="photo"><img src="assets/Expert_Talk_Program.jpg" alt="Students attending an expert talk programme" loading="lazy"><figcaption>Expert Talk Programme<span>Learning beyond the classroom</span></figcaption></figure>
@@ -284,6 +349,30 @@ footer{background:#022f2b;color:#b8d1cc;padding:28px 22px;font-size:13px}
     <figure class="photo"><img src="assets/Yoga_Day.jpeg" alt="Students participating in Yoga Day activities" loading="lazy"><figcaption>Yoga Day<span>Wellness and mindfulness</span></figcaption></figure>
     <figure class="photo"><img src="assets/yoga.jpeg" alt="Students participating in yoga activities" loading="lazy"><figcaption>Yoga Activity<span>Health and well-being</span></figcaption></figure>
     <figure class="photo"><img src="assets/students.jpeg" alt="Students of PM SHRI A.A. Latif Girls' Institution" loading="lazy"><figcaption>Our Students<span>School life and community</span></figcaption></figure>
+    <figure class="photo"><img src="assets/CULTURAL_PROGRAM2.jpeg" alt="Students participating in a cultural programme" loading="lazy"><figcaption>Cultural Programme<span>Celebrating culture and creativity</span></figcaption></figure>
+    <figure class="photo"><img src="assets/SAMPRITI_BHOJAN.jpeg" alt="School community participating in Sampriti Bhojan" loading="lazy"><figcaption>Sampriti Bhojan<span>Community and togetherness</span></figcaption></figure>
+    <figure class="photo"><img src="assets/CULTURAL_PROGRAM.jpeg" alt="Students participating in a cultural programme" loading="lazy"><figcaption>Cultural Programme<span>Student participation and performance</span></figcaption></figure>
+    <figure class="photo"><img src="assets/SPORTS2.jpeg" alt="Students taking part in a school sports activity" loading="lazy"><figcaption>Sports Activity<span>Teamwork and participation</span></figcaption></figure>
+    <figure class="photo"><img src="assets/SPORTS.jpeg" alt="Students participating in sports at school" loading="lazy"><figcaption>Sports<span>Physical activity and sportsmanship</span></figcaption></figure>
+    <figure class="photo"><img src="assets/EXPERT_TALK.jpeg" alt="Expert talk programme at the school" loading="lazy"><figcaption>Expert Talk<span>Learning beyond the classroom</span></figcaption></figure>
+    <figure class="photo"><img src="assets/field_visit.jpeg" alt="Students preparing for a PM SHRI field visit" loading="lazy"><figcaption>Field Visit<span>Experiential learning and exploration</span></figcaption></figure>
+    <figure class="photo"><img src="assets/ekta_diwas.jpeg" alt="Students participating in Ekta Diwas and Run for Unity" loading="lazy"><figcaption>Ekta Diwas / Run for Unity<span>Unity and participation</span></figcaption></figure>
+    <figure class="photo"><img src="assets/expert_talk_2.jpeg" alt="Students attending an expert talk" loading="lazy"><figcaption>Expert Talk<span>Learning beyond the classroom</span></figcaption></figure>
+    <figure class="photo"><img src="assets/auditorium.jpeg" alt="Students participating in an auditorium programme" loading="lazy"><figcaption>Auditorium Programme<span>School programme</span></figcaption></figure>
+    <figure class="photo"><img src="assets/farewell_class_x.jpeg" alt="Farewell programme for Class X students" loading="lazy"><figcaption>Farewell to Class X<span>Celebrating a school milestone</span></figcaption></figure>
+    <figure class="photo"><img src="assets/freshers_social.jpeg" alt="Freshers' Social programme" loading="lazy"><figcaption>Freshers' Social<span>Student interaction and culture</span></figcaption></figure>
+    <figure class="photo"><img class="rotated-dance" src="assets/dance_program_rotated.jpeg" alt="Students presenting a dance programme" loading="lazy"><figcaption>Dance Programme<span>Culture and creativity</span></figcaption></figure>
+    <figure class="photo"><img src="assets/auditorium2.jpeg" alt="Students participating in an auditorium programme" loading="lazy"><figcaption>Auditorium Programme<span>School activities</span></figcaption></figure>
+    <figure class="photo"><img src="assets/green_house.jpeg" alt="School green house" loading="lazy"><figcaption>Green House<span>Hands-on environmental learning</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section feedback" id="feedback">
+  <div class="eyebrow">Feedback & Suggestions</div>
+  <h2>We value your feedback.</h2>
+  <div class="feedback-card">
+    <p>Students, parents, alumni and visitors are welcome to share their suggestions, feedback and experiences with our school. Your feedback helps us identify areas for improvement and continue our efforts towards providing quality education.</p>
+    <a class="btn feedback-btn" href="https://forms.gle/HUktQdHPuWs86jkc8" target="_blank" rel="noopener">💬 Share Your Feedback</a>
   </div>
 </section>
 
